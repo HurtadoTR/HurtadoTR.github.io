@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&G Soluciones - Energía y Seguros</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #063469;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Cambia la dirección a columna */
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-align: center; /* Alinea el texto al centro */
+        }
+
+        header h2 {
+            margin: 10px 0 0; /* Ajusta el margen superior para separar del título */
+            font-size: 1.5em;
+            color: #ffd700;
+            text-align: center;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #004a99;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #002147;
+        }
+
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .producto {
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-10px);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .producto h3 {
+            font-size: 1.5em;
+            color: #004a99;
+            margin-bottom: 10px;
+        }
+
+        .producto p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .companias-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 20px 0;
+            white-space: nowrap;
+            background-color: #f4f7f9;
+            border-radius: 10px;
+        }
+
+        .companias-carousel img {
+            width: 150px;
+            margin: 0 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .companias-carousel img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        #contacto {
+            background-color: #004a99;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #contacto h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #contacto p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        #contacto a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        #contacto a:hover {
+            color: white;
+        }
+
+        .formulario-contacto {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .formulario-contacto label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .formulario-contacto input,
+        .formulario-contacto textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .formulario-contacto button {
+            background-color: #ffd700;
+            color: #002147;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .formulario-contacto button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/HurtadoTR/HurtadoTR.github.io/refs/heads/main/Adobe%20Express%20-%20file.webp" alt="logo">
+        <h1>H&G Soluciones</h1>
+        <h2>Energía y Seguros</h2>
+    </header>
+
+    <nav>
+        <a href="#nosotros">Sobre Nosotros</a>
+        <a href="#productos">Productos y Servicios</a>
+        <a href="#companias">Compañías</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="productos">
+        <h2>Nuestros Productos y Servicios</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/cerrar-manos-cambiando-bombilla_23-2148972946.jpg?raw=true" alt="Luz y gas (Hogares)">
+                <h3>Luz y gas (Hogares)</h3>
+                <p>Te ayudamos a ahorrar en luz y gas para tu hogar. Comparamos ofertas y gestionamos todo el proceso
+                    por ti.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/vista-interior-fabrica-acero_1359-118.jpg?raw=true" alt="Luz y gas (Empresas)">
+                <h3>Luz y gas (Empresas)</h3>
+                <p>Optimizamos contratos de luz y gas para empresas, realizando auditorías, negociando tarifas y
+                    gestionando contratos para reducir costes y mejorar la eficiencia energética.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/inclinacion-orientacion-placas-solares800.jpg?raw=true" alt="Placas Solares">
+                <h3>Placas Solares</h3>
+                <p>Aprovecha la energía solar para reducir tu factura de luz, con financiación a medida.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/H-G-Soluciones/blob/main/01-Por-qu%C3%A9-contratar-un-seguro-de-hogar.jpg?raw=true" alt="Seguro de Hogar">
+                <h3>Seguro de Hogar</h3>
+                <p>Protege tu vivienda contra robos, incendios y otros imprevistos con la mejor cobertura.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/picture-two-young-businessmen-meeting-station.jpg?raw=true" alt="Seguro de Empresas">
+                <h3>Seguro de Empresas</h3>
+                <p>Protege tu negocio con coberturas específicas para cada sector.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/joven-bella-mujer-conduciendo-su-coche_1301-3382.jpg?raw=true" alt="Seguro de Auto">
+                <h3>Seguro de Auto</h3>
+                <p>Máxima seguridad y asistencia en carretera para tu vehículo.</p>
+            </div>
+            <div class="producto">
+                <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/estetoscopio-medico-papel-cortado-familia_23-2148488217.jpg?raw=true"
+                    alt="Seguro de Salud">
+                <h3>Seguro de salud</h3>
+                <p>Tu salud, priorizada y protegida, sin esperas.</p>
+            </div>
+            <div class="producto">
+                <img src="https://raw.githubusercontent.com/HurtadoTR/HurtadoTR.github.io/refs/heads/main/familia-joven-sus-hijos-casa-divirtiendose_1303-20999.avif"
+                    alt="Seguro de Vida">
+                <h3>Seguro de vida</h3>
+                <p>Protege a tu familia con un seguro de vida, tranquilidad y seguridad financiera garantizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="companias">
+        <h2>Trabajamos con las Mejores Compañías</h2>
+        <div class="companias-carousel">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/fox%20energia.png?raw=true" alt="FoxEnergy">
+            <img src="https://raw.githubusercontent.com/HurtadoTR/HurtadoTR.github.io/refs/heads/main/Repsol-logo-square.webp" alt="Repsol">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/Acciona_logo.svg.png?raw=true" alt="Acciona">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/ENDESA.png?raw=true" alt="Endesa">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/logo-naturgy.jpg?raw=true" alt="Naturgy">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/280829.jpeg?raw=true" alt="Iberdrola">
+            <img src="https://raw.githubusercontent.com/HurtadoTR/HurtadoTR.github.io/refs/heads/main/Allianz%20-%20Proud%20Parnters%20of%20Venues%20NSW%20(1).webp" alt="Allianz">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/7c943164018d11581026a6b50e036979-768x768.png?raw=true" alt="Mapfre">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/generali-seguros.png?raw=true" alt="Generali">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/images%20(1).png?raw=true" alt="Pelayo">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/Caser-630x466.jpg?raw=true" alt="Caser">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/Allianz-Logo.wine_.png?raw=true" alt="Allianz">
+            <img src="https://github.com/HurtadoTR/HurtadoTR.github.io/blob/main/Zurich_Insurance_Group_logo.svg.png?raw=true" alt="Zurich">
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En H&G Soluciones, nos dedicamos a ofrecer soluciones integrales en la comercialización de luz, gas y seguros
+            para hogares y empresas. Con sede en la Región de Murcia, nos enorgullece ser un referente en el sector,
+            ayudando a nuestros clientes a encontrar las mejores opciones del mercado.</p>
+
+        <p>Nuestra misión es simple: ahorrar tiempo y dinero a nuestros clientes. Trabajamos con las principales
+            compañías de energía y seguros, comparando los mejores precios y condiciones para ofrecerte tarifas
+            competitivas y coberturas adaptadas a tus necesidades. Ya sea que busques optimizar tus facturas de luz y
+            gas, o proteger tu hogar, negocio, vehículo o salud, estamos aquí para ayudarte.</p>
+
+        <p>En H&G Soluciones, no solo nos preocupamos por ofrecerte los mejores precios, sino también por brindarte un
+            servicio de atención y asistencia personalizado. Nuestro equipo de expertos está siempre disponible para
+            resolver tus dudas, gestionar trámites y asegurarte una experiencia sin complicaciones.</p>
+
+        <p>Confía en nosotros para cuidar de tus intereses. En H&G Soluciones, tu tranquilidad es nuestra prioridad.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o necesitas más información? ¡No dudes en contactarnos!</p>
+        <div class="formulario-contacto">
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+          <form action="https://formspree.io/f/xrbenvle" method="POST">
+        </div>
+        <p>O contáctanos directamente:</p>
+        <p>E-mail: <a href="mailto:hurtadotovaralejandro@gmail.com">hurtadotovaralejandro@gmail.com</a></p>
+        <p>Teléfono: <a href="tel:661384560">661 384 560 - </a> <a href="tel:625 115 052"> 625 115 052 </a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 H&G Soluciones - Energía y Seguros. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
